@@ -13,15 +13,10 @@ def sendmail():
     msg['From'] = formataddr(['mao', 'clevermlx@163.com'])
     msg['To'] = formataddr(['CoolGuy', '27230476@qq.com'])
     msg['Subject'] = Header("Python开会脚本", 'utf-8')
-    print('---------------------1')
     server = smtplib.SMTP('smtp.163.com', 25)
-    print('---------------------2')
     server.login('clevermlx@163.com', '授权码')
-    print('---------------------3')
     server.sendmail('clevermlx@163.com', '27230476@qq.com', msg.as_string())
-    print('---------------------4')
     server.quit()
-    print('---------------------5')
     print('run complete')
 
 
